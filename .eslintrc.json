@@ -1,0 +1,42 @@
+{
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "react/jsx-uses-vars": "error",
+        "react/jsx-uses-react": "error",
+        "no-console": "warn",
+        "consistent-return": "error",
+        "react/jsx-no-bind": ["error", {
+            "ignoreRefs": true
+        }],
+        "semi": ["error", "always"]
+    },
+    "globals": {
+        "Promise": true,
+        "require": true,
+        "module": true,
+        "__dirname": true,
+        "process": true
+    }
+}
