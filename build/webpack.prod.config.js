@@ -8,7 +8,9 @@ const path = require('path');
 
 module.exports = merge(webpackBaseConfig, {
     output: {
-        filename: '[name].[chunkhash:8].js',
+        filename: (chunkData) => {
+            return chunkData.chunk.name === 'builtIn' ? '[name].min.js': '[name].[chunkhash:8].js';
+        },
         chunkFilename: '[name].[chunkhash:8].js'
     },
     plugins: [

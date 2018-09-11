@@ -6,7 +6,8 @@ Visualize your trip with geo-location and gps track. Let photos and trace speak.
 
 Here are what you need.
 
-- A DOM container
+- A DOM container with following dataset property
+  - *(optional)*`zoom` zoom level of the inserted map
 - Photos
   - Make sure they are with geo information in their EXIFs
   - Meta data as properties on `<img>` tag
@@ -27,7 +28,7 @@ You will have a Baidu Map in the prepared placeholder with photos at real geo-lo
 
 **Notice**
 
-Original photographs are usually big which affects your website performance. But most softwares will delete EXIF information part while compressing images. If you want image compressing with EXIF, you may need [this](https://shenlvmeng.github.io/lab/exif.html).
+Original photographs are usually big which affects your website performance. But most softwares will delete EXIF information part while compressing images. If you want image compressed with EXIF, you may need [this](https://shenlvmeng.github.io/lab/exif.html).
 
 ### Usage 2 - A whole pageview
 

@@ -37,6 +37,9 @@
         "require": true,
         "module": true,
         "__dirname": true,
-        "process": true
+        "process": true,
+        "BMap": true,
+        "BMAP_NORMAL_MAP": true,
+        "BMAP_HYBRID_MAP": true
     }
 }

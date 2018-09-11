@@ -5,7 +5,8 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        main: './src/entry'
+        main: './src/entry',
+        builtIn: './src/built-in'
     },
     output: {
         path: path.join(__dirname, '../output/')
