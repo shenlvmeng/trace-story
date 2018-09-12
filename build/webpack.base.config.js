@@ -5,11 +5,12 @@ const path = require('path');
 
 module.exports = {
     entry: {
+        vendor: ['@babel/polyfill', 'react', 'react-dom', 'react-redux', 'react-router'],
         main: './src/entry',
         builtIn: './src/built-in'
     },
     output: {
-        path: path.join(__dirname, '../output/')
+        path: path.join(__dirname, '../dist/')
     },
     module: {
         rules: [
@@ -70,16 +71,5 @@ module.exports = {
             '@': path.join(__dirname, '../src')
         },
         extensions: ['.js', '.jsx']
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendor',
-                    chunks: 'all'
-                }
-            }
-        }
     }
 };

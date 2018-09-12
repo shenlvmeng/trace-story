@@ -16,7 +16,7 @@ module.exports = merge({
         new HtmlWebpackPlugin({
             filename: 'built-in.html',
             template: './src/templates/built-in.html',
-            chunks: ['vendor', 'builtIn']
+            chunks: ['builtIn']
         })
     ]
 }, base);

@@ -1,6 +1,7 @@
 /* eslint-disable */
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const cleanWebpackPlugin = require('clean-webpack-plugin');
 const webpackBaseConfig = require('./webpack.base.config.js');
@@ -14,7 +15,7 @@ module.exports = merge(webpackBaseConfig, {
         chunkFilename: '[name].[chunkhash:8].js'
     },
     plugins: [
-        new cleanWebpackPlugin(['output/*'], {
+        new cleanWebpackPlugin(['dist/*'], {
             root: path.resolve(__dirname, '../')
         }),
         new webpack.HashedModuleIdsPlugin(),
@@ -23,5 +24,6 @@ module.exports = merge(webpackBaseConfig, {
             template: './src/templates/index.html',
             chunks: ['vendor', 'main']
         })
+        // new BundleAnalyzerPlugin()
     ]
 });
