@@ -7,7 +7,7 @@
 只需添加下面的`<script>`标签到你博客的Markdown或HTML文档中。
 
 ```HTML
-<script src="https://cdn.jsdelivr.net/gh/shenlvmeng/trace-story@0.0.1/src/builtIn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/shenlvmeng/trace-story@0.1.0/src/builtIn.min.js" defer></script>
 
 <!-- 或忽略版本号 -->
 
