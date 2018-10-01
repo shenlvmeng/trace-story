@@ -1,0 +1,120 @@
+.header {
+    padding-top: 30px;
+    height: 100vh;
+    min-height: 614px;
+}
+.banner-panel {
+    position: relative;
+    height: 65%;
+    padding: 20px 0 0 20px;
+    .title {
+        margin-bottom: 15px;
+        font-size: 52px;
+        font-weight: 700;
+        color: #5a6c6c;
+    }
+    .slogan {
+        width: 240px;
+        font-size: 18px;
+        line-height: 30px;
+        color: #f2a068;
+    }
+    .divider {
+        width: 80px;
+        height: 3px;
+        margin-bottom: 15px;
+        background-color: #c1635d;
+    }
+    .try-now {
+        height: 40px;
+        line-height: 40px;
+        margin-top: 70px;
+        padding: 0 40px;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #a24957;
+        cursor: pointer;
+        box-shadow: 0px 8px 25px -2px rgba(162,73,87,0.75);
+    }
+    .preview-img {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+}
+.step-intro {
+    height: 35%;
+    border-bottom: 1px solid #e8e8e8
+}
+.step {
+    display: inline-block;
+    vertical-align: middle;
+    width: 33.3%;
+    height: 100%;
+}
+.step-content {
+    max-width: 200px;
+    margin: 0 auto;
+    padding-top: 5vh;
+    color: #aaa;
+    text-align: center;
+    .interpretation {
+        .step-number {
+            font-size: 20px;
+            line-height: 2;
+            font-weight: bold;
+        }
+        p {
+            line-height: 1.5;
+        }
+    }
+    .iconfont {
+        font-size: 40px;
+        margin-bottom: 10px;
+        &.photo:after {
+            content: '\e61b';
+        }
+        &.track:after {
+            content: '\e764';
+        }
+        &.desc:after {
+            content: '\e6e8';
+        }
+    }
+    &.active .interpretation {
+        color: #353535;
+    }
+    &.active .iconfont {
+        color: #c1635d;
+    }
+}
+
+.steps {
+    height: 65vh;
+    min-height: 400px;
+    padding-bottom: 20px;
+    overflow-y: scroll;
+    box-sizing: content-box;
+    .upload {
+        display: block;
+        width: 200px;
+        line-height: 2;
+        margin: 20px auto;
+        padding: 6px 15px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #4a95ff;
+        border-radius: 6px;
+        border: none;
+    }
+    .upload-btn {
+        margin-right: 4px;
+        &:after {
+            content: '\e669';
+        }
+    }
+}

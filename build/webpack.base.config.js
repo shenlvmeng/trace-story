@@ -5,8 +5,8 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        vendor: ['@babel/polyfill', 'react', 'react-dom', 'react-redux', 'react-router'],
-        main: './src/entry',
+        vendor: ['@babel/polyfill', 'react', 'react-dom'],
+        main: './src/page/main',
         builtIn: './src/built-in'
     },
     output: {
