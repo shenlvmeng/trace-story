@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import AOS from 'aos';
 import generate from './apis';
 import Index from './containers/index';
 import Preview from './containers/preview';
-import 'aos/dist/aos.css';
-
-AOS.init();
 
 class App extends Component {
     constructor(props) {
@@ -46,7 +42,12 @@ class App extends Component {
     render() {
         const { images, tracks, meta, isPreview } = this.state;
         return !isPreview
-            ? <Index onSubmit={this.handleGenerate} />
+            ? <Index
+                images={images}
+                tracks={tracks}
+                meta={meta}
+                onSubmit={this.handleGenerate}
+            />
             : (
                 <Preview
                     images={images}

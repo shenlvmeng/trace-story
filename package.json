@@ -50,9 +50,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "aos": "^3.0.0-beta.5",
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
+    "dayjs": "^1.7.7",
     "exif-js": "^2.3.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.2",

@@ -8,5 +8,11 @@
 </head>
 <body>
     <div id="root"></div>
+    <script src="//api.map.baidu.com/api?v=2.0&ak=xKN1lGY9lNDXBDQ4WPdTmYsZ73hww0UU&callback=_init_story"></script>
+    <script>
+        window._init_story = function() {
+            console.log('Baidu Map loaded.');
+        }
+    </script>
 </body>
 </html>

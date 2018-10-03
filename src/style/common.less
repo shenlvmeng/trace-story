@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'iconfont';  /* project id 860174 */
-    src: url('//at.alicdn.com/t/font_860174_di6nfw4vlae.eot');
-    src: url('//at.alicdn.com/t/font_860174_di6nfw4vlae.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_860174_di6nfw4vlae.woff') format('woff'),
-    url('//at.alicdn.com/t/font_860174_di6nfw4vlae.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_860174_di6nfw4vlae.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_860174_xc1baode2qj.eot');
+    src: url('//at.alicdn.com/t/font_860174_xc1baode2qj.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_860174_xc1baode2qj.woff') format('woff'),
+    url('//at.alicdn.com/t/font_860174_xc1baode2qj.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_860174_xc1baode2qj.svg#iconfont') format('svg');
 }
 
 html, body, #root {
@@ -45,12 +45,19 @@ button {
         opacity: 0.8;
     }
 }
+input, textarea {
+    font-family: @main-font-family;
+    outline: none;
+}
 input:not([type='file']) {
     user-select: text;
     -webkit-user-select: text;
 }
 input[type='file'] {
     display: none;
+}
+::placeholder {
+    color: #c2c2c2;
 }
 .main {
     max-width: 920px;

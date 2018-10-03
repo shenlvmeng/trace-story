@@ -23,7 +23,7 @@ export default function(props) {
             </div>
             <div className="step-intro">
                 <div className="step">
-                    <div className="step-content active">
+                    <div className={classNames('step-content', { active: step > 0 })}>
                         <div className="iconfont photo" />
                         <div className="interpretation">
                             <p className="step-number">Step1: </p>
@@ -33,7 +33,7 @@ export default function(props) {
                     </div>
                 </div>
                 <div className="step">
-                    <div className={classNames('step-content', { active: step > 0 })}>
+                    <div className={classNames('step-content', { active: step > 1 })}>
                         <div className="iconfont track" />
                         <div className="interpretation">
                             <p className="step-number">Step2: </p>
@@ -43,7 +43,7 @@ export default function(props) {
                     </div>
                 </div>
                 <div className="step">
-                    <div className={classNames('step-content', { active: step > 1 })}>
+                    <div className={classNames('step-content', { active: step > 2 })}>
                         <div className="iconfont desc" />
                         <div className="interpretation">
                             <p className="step-number">Step3: </p>

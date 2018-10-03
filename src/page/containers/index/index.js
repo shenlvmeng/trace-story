@@ -22,7 +22,11 @@ class Index extends Component {
         return (
             <div className="main">
                 <Header step={step} />
-                <Steps step={step} onStepChange={this.handleStepChange} />
+                <Steps
+                    step={step}
+                    onStepChange={this.handleStepChange}
+                    {...this.props}
+                />
                 <div className="footer">&copy; shenlvmeng 2018</div>
             </div>
         );

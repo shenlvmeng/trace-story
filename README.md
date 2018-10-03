@@ -17,6 +17,7 @@
 当然，你还需要下面的准备：
 
 - 放置地图的DOM容器，一个简单的`<div>`即可，你可以自定义修饰它的样式
+  - *（必选）*`id`需要是`trace-story`
   - *（可选）*`data-zoom`属性，表示地图的缩放级别，3-18之间，值越大缩放的越细，默认12。你可以手动调整到一个最合适的数。
 - 照片
   - **请确保照片中带有地理位置的EXIF消息**，通常是照片原图
@@ -36,7 +37,7 @@
 
 **提示**
 
-带有地理位置EXIF信息的照片原图通常很大（数M），会严重拖慢你的网站加载时间。然而，目前绝大多数的照片压缩工具（PhotoShop除外）在压缩图片时，为了最大程度减少图片体积，都会删除EXIF信息（至少会删除EXIF地理位置信息）。如果你想要完整保留EXIF信息的JPG文件压缩，你可能需要[这个链接](https://shenlvmeng.github.io/lab/exif.html)
+带有地理位置EXIF信息的照片原图通常很大（数M），会严重拖慢你的网站加载时间。然而，目前绝大多数的照片压缩工具（PhotoShop除外）在压缩图片时，为了最大程度减少图片体积，都会删除EXIF信息（至少会删除EXIF地理位置信息）。如果你想要完整保留EXIF信息的JPG文件压缩，你可能需要[这个链接](https://shenlvmeng.github.io/lab/exif.html)（🚧施工中🚧）
 
 ### 使用方法2 - 游记页面
 
@@ -69,6 +70,7 @@ Just add following `<script>` in your Markdown or HTML.
 Besides, here are what you need.
 
 - A DOM container with following dataset property
+  - *(neccessary)* `id` should be `trace-story`
   - *(optional)*`data-zoom` zoom level of the inserted map
 - Photos
   - Make sure they are with geo information in their EXIFs
