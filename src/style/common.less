@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'iconfont';  /* project id 860174 */
-    src: url('//at.alicdn.com/t/font_860174_xc1baode2qj.eot');
-    src: url('//at.alicdn.com/t/font_860174_xc1baode2qj.eot?#iefix') format('embedded-opentype'),
-    url('//at.alicdn.com/t/font_860174_xc1baode2qj.woff') format('woff'),
-    url('//at.alicdn.com/t/font_860174_xc1baode2qj.ttf') format('truetype'),
-    url('//at.alicdn.com/t/font_860174_xc1baode2qj.svg#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/font_860174_xdz6bbj6a7k.eot');
+    src: url('//at.alicdn.com/t/font_860174_xdz6bbj6a7k.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_860174_xdz6bbj6a7k.woff') format('woff'),
+    url('//at.alicdn.com/t/font_860174_xdz6bbj6a7k.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_860174_xdz6bbj6a7k.svg#iconfont') format('svg');
 }
 
 html, body, #root {
@@ -65,4 +65,26 @@ input[type='file'] {
 }
 .iconfont {
     font-family: iconfont;
+}
+.github-corner:hover .octo-arm {
+    animation:octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave{
+    0%, 100% {
+        transform: rotate(0);
+    }
+    20%, 60% {
+        transform: rotate(-25deg);
+    }
+    40%, 80% {
+        transform: rotate(10deg);
+    }
+}
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+    .github-corner .octo-arm{
+        animation: octocat-wave 560ms ease-in-out;
+    }
 }

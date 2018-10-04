@@ -27,15 +27,21 @@ class App extends Component {
         this.setState({ isPreview: false });
     }
 
-    handleSubmit = (images, tracks, meta) => {
+    handleSubmit = ({ zoom }) => {
+        const { title, desc } = this.state.meta;
         const data = new FormData();
-        images.forEach(image => {
-            data.append('image[]', image);
+        this.state.images.forEach(image => {
+            data.append('image[]', image.blob);
         });
-        tracks.forEach(track => {
+        this.state.tracks.forEach(track => {
             data.append('track[]', track);
         });
-        data.append(meta);
+        data.append('imageDesc', this.state.images.map(img => img.desc));
+        data.append('zoom', zoom);
+        data.append('title', title);
+        data.append('desc', desc);
+
+        alert('后台施工中，敬请期待。');
         generate(data);
     }
 

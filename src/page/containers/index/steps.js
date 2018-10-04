@@ -35,7 +35,7 @@ class Steps extends Component {
 
     handlePhotoDescChange = (e) => {
         const key = e.target.dataset.key;
-        const value = e.target.value.trim();
+        const value = e.target.value;
         this.state.images[key].desc = value;
         this.forceUpdate();
     }
@@ -60,7 +60,7 @@ class Steps extends Component {
     }
 
     handleTitleChange = (e) => {
-        this.setState({ title: e.target.value.trim() });
+        this.setState({ title: e.target.value });
     }
 
     handleAuthorChange = (e) => {
@@ -68,7 +68,7 @@ class Steps extends Component {
     }
 
     handleDescChange = (e) => {
-        this.setState({ desc: e.target.value.trim() });
+        this.setState({ desc: e.target.value });
     }
 
     handleNext = () => {
