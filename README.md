@@ -41,7 +41,7 @@
 
 ### 使用方法2 - 游记页面
 
-一个展示游记的完整页面。可以访问[这里](https://shenlvmeng.cn/track-story/generate/)生成。
+一个展示游记的完整页面。可以访问[这里](https://shenlvmeng.cn/trace-story)生成。
 
 跟着步骤一步步填写信息，生成后下载资源，放在你的博客里就可以让别人访问了。
 

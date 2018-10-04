@@ -9,6 +9,7 @@ const path = require('path');
 
 module.exports = merge(webpackBaseConfig, {
     output: {
+        publicPath: '/public/assets/',
         filename: (chunkData) => {
             return chunkData.chunk.name === 'builtIn' ? '[name].min.js': '[name].[chunkhash:8].js';
         },
