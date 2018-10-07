@@ -66,6 +66,18 @@
                 font-size: 20px;
                 line-height: 2;
                 font-weight: bold;
+                .mandatory {
+                    position: relative;
+                    &:after {
+                        content: '*';
+                        position: absolute;
+                        top: 2px;
+                        left: -12px;
+                        line-height: 1;
+                        font-weight: bold;
+                        color: #f44336;
+                    }
+                }
             }
             p {
                 line-height: 1.5;
@@ -168,6 +180,9 @@
         border-radius: 6px;
         background-color: #f5f6fa;
         overflow: hidden;
+        &.warn {
+            background-color: rgba(244, 67, 54, 0.6);
+        }
         &-img {
             position: relative;
         }
@@ -196,6 +211,12 @@
             &:focus {
                 border: 1px solid #4a95ff;
             }
+        }
+        .warn-message {
+            width: 250px;
+            height: 54px;
+            padding-top: 7px;
+            color: #fff;
         }
         .remove {
             position: absolute;

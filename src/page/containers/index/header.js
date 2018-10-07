@@ -26,8 +26,10 @@ export default function(props) {
                     <div className={classNames('step-content', { active: step > 0 })}>
                         <div className="iconfont photo" />
                         <div className="interpretation">
-                            <p className="step-number">Step1: </p>
-                            <p>上传你的游记照片</p>
+                            <p className="step-number">
+                                <span className="mandatory">Step 1</span>
+                            </p>
+                            <p>上传你带有定位的游记照片</p>
                             <p>推荐3张以上</p>
                         </div>
                     </div>
@@ -36,8 +38,8 @@ export default function(props) {
                     <div className={classNames('step-content', { active: step > 1 })}>
                         <div className="iconfont track" />
                         <div className="interpretation">
-                            <p className="step-number">Step2: </p>
-                            <p>上传你的gpx轨迹文件</p>
+                            <p className="step-number">Step 2</p>
+                            <p>上传你的.gpx轨迹文件</p>
                             <p>秀出旅行轨迹</p>
                         </div>
                     </div>
@@ -46,7 +48,9 @@ export default function(props) {
                     <div className={classNames('step-content', { active: step > 2 })}>
                         <div className="iconfont desc" />
                         <div className="interpretation">
-                            <p className="step-number">Step3: </p>
+                            <p className="step-number">
+                                <span className="mandatory">Step 3</span>
+                            </p>
                             补充旅行感受和其他信息
                         </div>
                     </div>

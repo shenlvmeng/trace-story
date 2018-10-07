@@ -22,6 +22,7 @@ class Preview extends Component {
             showImgDetail: false
         };
         this.imgData = [];
+        this.currImageLabel = null;
     }
 
     componentDidMount() {
@@ -41,6 +42,11 @@ class Preview extends Component {
                 },
                 showImgDetail: true
             });
+            if (this.currImageLabel) {
+                this.currImageLabel.parentNode.classList.remove('current');
+            }
+            e.target.parentNode.classList.add('current');
+            this.currImageLabel = e.target;
         } else {
             this.setState({ showImgDetail: false });
         }
@@ -86,7 +92,7 @@ class Preview extends Component {
                 points.map(p => new BMap.Point(p.lng, p.lat)),
                 { enableMassClear: false }
             );
-            polyline.setStrokeColor("#4a95ff");
+            polyline.setStrokeColor("#f44336");
             this.map.addOverlay(polyline);
         });
     }

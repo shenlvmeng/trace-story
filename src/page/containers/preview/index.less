@@ -1,3 +1,11 @@
+@keyframes inflatten {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(1.08, 1.08);
+    }
+}
 .preview {
     width: 100vw;
     height: 100vh;
@@ -98,7 +106,16 @@
 .BMapLabel {
     border: 1px solid #eee !important;
     border-radius: 8px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    will-change: transform;
+    transform-origin: center bottom;
+    animation: inflatten infinite 1s alternate cubic-bezier(.645,.045,.355,1);
+    cursor: pointer !important;
+    &.current {
+        animation: inherit;
+        transform: scale(1.2);
+        box-shadow: 0 3px 10px rgba(244, 67, 54, 0.6);
+    }
 }
 .trace-story-shortcut {
     position: relative;

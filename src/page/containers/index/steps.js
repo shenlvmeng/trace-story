@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import EXIF from 'exif-js';
 
 class Steps extends Component {
     constructor(props) {
@@ -23,14 +24,18 @@ class Steps extends Component {
         this.gpxInputRef.current.click();
     }
 
-    handlePhotoUploaded = () => {
+    handlePhotoUploaded = async () => {
         const photos = this.photoInputRef.current.files;
-        this.setState({
-            images: Array.from(photos).map(photo => ({
+        const images = await Promise.all(Array.from(photos).map(async (photo) => {
+            const buffer = await new Response(photo).arrayBuffer();
+            const tags = EXIF.readFromBinaryFile(buffer);
+            return {
                 blob: photo,
-                desc: ''
-            }))
-        });
+                desc: '',
+                hasGPSInfo: !!(tags.GPSLatitude && tags.DateTime)
+            };
+        }));
+        this.setState({ images });
     }
 
     handlePhotoDescChange = (e) => {
@@ -102,7 +107,7 @@ class Steps extends Component {
                     <div className="btns">
                         <button className="prev" onClick={this.handlePrev}>上一步</button>
                         <button className="upload" onClick={this.handleUploadGpx}>
-                            <span className="iconfont upload-btn" />上传gpx轨迹文件
+                            <span className="iconfont upload-btn" />上传.gpx轨迹文件
                             <input
                                 type="file"
                                 accept=".gpx"
@@ -177,20 +182,26 @@ class Steps extends Component {
                         })} onClick={this.handleNext}>下一步</button>
                     </div>
                     {images.map((image, index) => (
-                        <div className="photo" key={index}>
+                        <div className={classNames('photo', {
+                            warn: !image.hasGPSInfo
+                        })} key={index}>
                             <div className="photo-img">
                                 <img src={URL.createObjectURL(image.blob)} />
                                 <div className="remove" data-key={index} onClick={this.handleRemovePhoto}>
                                     <span className="iconfont trash" />删除
                                 </div>
                             </div>
-                            <textarea
-                                rows="3"
-                                value={image.desc}
-                                placeholder="照片描述..."
-                                data-key={index}
-                                onChange={this.handlePhotoDescChange}
-                            />
+                            {image.hasGPSInfo
+                                ? (
+                                    <textarea
+                                        rows="3"
+                                        value={image.desc}
+                                        placeholder="照片描述..."
+                                        data-key={index}
+                                        onChange={this.handlePhotoDescChange}
+                                    />
+                                )
+                                : <div className="warn-message">未从照片中找到完整的定位信息，将影响生成效果</div>}
                         </div>
                     ))}
                 </React.Fragment>

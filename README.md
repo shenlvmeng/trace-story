@@ -37,11 +37,11 @@
 
 **提示**
 
-带有地理位置EXIF信息的照片原图通常很大（数M），会严重拖慢你的网站加载时间。然而，目前绝大多数的照片压缩工具（PhotoShop除外）在压缩图片时，为了最大程度减少图片体积，都会删除EXIF信息（至少会删除EXIF地理位置信息）。如果你想要完整保留EXIF信息的JPG文件压缩，你可能需要[这个链接](https://shenlvmeng.github.io/lab/exif.html)（🚧施工中🚧）
+带有地理位置EXIF信息的照片原图通常很大（数M），会严重拖慢你的网站加载时间。然而，目前绝大多数的照片压缩工具（PhotoShop除外）在压缩图片时，为了最大程度减少图片体积，都会删除EXIF信息（至少会删除EXIF地理位置信息）。如果你想要完整保留EXIF信息的JPG文件压缩，你可能需要[这个链接](https://shenlvmeng.github.io/lab/exif.html)
 
 ### 使用方法2 - 游记页面
 
-一个展示游记的完整页面。可以访问[这里](https://shenlvmeng.cn/trace-story)生成。
+一个展示游记的完整页面。可以访问[这里](https://shenlvmeng.cn/trace-story)生成。（🚧施工中🚧）
 
 跟着步骤一步步填写信息，生成后下载资源，放在你的博客里就可以让别人访问了。
 
