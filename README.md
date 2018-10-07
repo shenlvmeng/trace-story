@@ -96,7 +96,7 @@ Original photographs are usually big which affects your website performance. But
 
 ### Usage 2 - A whole pageview
 
-Visit [here](https://shenlvmeng.cn/track-story/generate/).
+Visit [here](https://shenlvmeng.cn/trace-story).
 
 1. Follow instructions to generate a whole page.
 2. Download generated resources
