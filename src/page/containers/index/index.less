@@ -5,8 +5,12 @@
 }
 .banner-panel {
     position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
     height: 65%;
-    padding: 20px 0 0 20px;
+    padding-left: 10% 0 0 20px;
     .title {
         margin-bottom: 15px;
         font-size: 52px;
@@ -41,24 +45,27 @@
     }
     .preview-img {
         position: absolute;
-        height: 100%;
-        top: 0;
+        height: 60%;
+        top: 10%;
         right: 0;
     }
 }
 .step-intro {
     height: 35%;
-    border-bottom: 1px solid #e8e8e8;
+    background-color: #fafafc;
     .step {
+        position: relative;
         display: inline-block;
         vertical-align: middle;
         width: 33.3%;
         height: 100%;
     }
     .step-content {
-        max-width: 200px;
-        margin: 0 auto;
-        padding-top: 5vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 200px;
         color: #aaa;
         text-align: center;
         .interpretation {

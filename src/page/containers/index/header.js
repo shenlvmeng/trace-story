@@ -29,7 +29,7 @@ export default function(props) {
                             <p className="step-number">
                                 <span className="mandatory">Step 1</span>
                             </p>
-                            <p>上传你带有定位的游记照片</p>
+                            <p>上传带有定位的游记照片</p>
                             <p>推荐3张以上</p>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ export default function(props) {
                         <div className="iconfont track" />
                         <div className="interpretation">
                             <p className="step-number">Step 2</p>
-                            <p>上传你的.gpx轨迹文件</p>
+                            <p>上传后缀为.gpx的轨迹文件</p>
                             <p>秀出旅行轨迹</p>
                         </div>
                     </div>

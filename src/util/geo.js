@@ -186,7 +186,7 @@ function wgs2bd({lat, lon}) {
     return bd_encrypt(gcj.lat, gcj.lon);
 }
 
-module.exports = {
+export {
     distance,
     mercator_encrypt,
     mercator_decrypt,
