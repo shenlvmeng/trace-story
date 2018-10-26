@@ -41,7 +41,6 @@ class App extends Component {
         data.append('title', title);
         data.append('desc', desc);
 
-        alert('后台施工中，敬请期待。');
         generate(data);
     }
 
